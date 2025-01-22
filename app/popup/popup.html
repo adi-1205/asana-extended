@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <h3 id="head">
+            <div id="back" class="hidden">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            asana+
+        </h3>
+
+        <div class="head-wrapper">
+            <img src="" id="cat-img" alt="">
+            <h3 id="table-head">
+                Tasks
+            </h3>
+            <span id="more">
+                <i class="fas fa-ellipsis-v dots"></i>
+                <div class="delete-wrapper">
+                    <a href="#">
+                        <i class="fa-solid fa-trash trash"></i> 
+                        Delete
+                    </a>
+                </div>
+            </span>
+        </div>
+
+        <div class="filter-wrapper">
+            <div class="search-filter">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search tasks" id="search">
+            </div>
+            <div class="status-wrapper" id="search-dropdown">
+                <div class="task-status" data-status="all">
+                    <span class="status-text">⏳ All</span>
+                    <i class="fa-solid fa-chevron-down down-arrow"></i>
+                </div>
+
+                <div id="" class="options d-none">
+                    <div class="option" data-value="all">
+                        <i class="fa-solid fa-check check hidden"></i>
+                        ⏳ All
+                    </div>
+                    <div class="option" data-value="todo">
+                        <i class="fa-solid fa-check check hidden"></i>
+                        📝 Todo
+                    </div>
+                    <div class="option" data-value="inprogress">
+                        <i class="fa-solid fa-check check hidden"></i>
+                        🚧 In Progress
+                    </div>
+                    <div class="option" data-value="done">
+                        <i class="fa-solid fa-check check hidden"></i>
+                        😎 Done
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="table-wrapper">
+                <table id="task-table" class="d-none"></table>
+            </div>
+            <div id="no-task" class="d-none">
+                No tasks yet, <br>
+                Click the 🦆 in task details to get started
+            </div>
+            <div id="task-details" class="">
+                <h3 id="task-name">T3</h3>
+                <div id="task-desc-wrapper">
+                    <p>Description</p>
+                    <div id="task-desc" class="empty" placeholder="Your description here" contenteditable>
+                        Your description here
+                    </div>
+                </div>
+
+                <div class="status-wrapper" id="status-dropdown">
+                    <label for="">Status</label>
+                    <div class="task-status" data-status="todo">
+                        <span class="status-text">📝 Todo</span>
+                        <i class="fa-solid fa-chevron-down down-arrow"></i>
+                    </div>
+
+                    <div id="" class="options d-none">
+                        <div class="option" data-value="todo">
+                            <i class="fa-solid fa-check check hidden"></i>
+                            📝 Todo
+                        </div>
+                        <div class="option" data-value="inprogress">
+                            <i class="fa-solid fa-check check hidden"></i>
+                            🚧 In Progress
+                        </div>
+                        <div class="option" data-value="done">
+                            <i class="fa-solid fa-check check hidden"></i>
+                            😎 Done
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

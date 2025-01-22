@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "asana+",
+  "description": "added features to asana",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "images/duck.png",
+        "images/cat.gif",
+        "images/fish.gif"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/asanaplus.png",
+      "48": "icons/asanaplus.png",
+      "128": "icons/asanaplus.png"
+    }
+  },
+  "icons": {
+    "16": "icons/asanaplus.png",
+    "48": "icons/asanaplus.png",
+    "128": "icons/asanaplus.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.asana.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
